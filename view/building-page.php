@@ -3,7 +3,7 @@ $titulo = "IgleVision";
 include_once "app/templates/app-inc-page/cabecera-header-inc.php";
 ?>
 <div class="container">
-    <h4 class="h4 mx-auto text-center tittle-dark m-4">IgleVisión muy pronto!</h4>
+    <h4 class="h4 mx-auto bg-white text-center tittle-dark m-4">IgleVisión muy pronto!</h4>
     <div class="row m-4">
         <div class="col-md-10  mx-auto m-4">
             <div class="h-100 p-5 text-white bg-dark rounded-3 jumbotron">

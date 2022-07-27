@@ -1,2 +1,2 @@
-# building-page
-building page
+# building page
+Show building page for any

@@ -1,0 +1,73 @@
+<?php
+//DATOS DEL SITIO
+
+define('NOMBRE_PRINCIPAL', 'Bilding-page'); #nombre
+
+// Creacion de base de datos
+
+//información de la base de datos
+define('NOMBRE_SERVIDOR', 'localhost'); #nombre
+define('NOMBRE_USUARIO', 'root'); #usuario
+define('PASSWORD', ''); #clave
+define('NOMBRE_BD', 'instarapids'); #nombre de la base de datos
+define('PAIS_ZONA_HORARIA', 'America/Caracas'); #pais - zona horaria
+define('ZONA_HORARIA', '-4:00'); #zona horaria
+/* Rutas de la web
+http://localhost/instarapid/
+    ** Colocar el url del dominio entre comillas y reemplazarlo con el nombre del dominio final
+    Nota si es http o https colocar s porque por defecto viene http
+    */
+define("HTTPS", $_SERVER["REQUEST_SCHEME"] . "://");
+define("DOMINIO", $_SERVER['SERVER_NAME']);
+define("PUERTO", $_SERVER['SERVER_PORT']);
+// Verificación de servidor de prueba u oficial
+if (PUERTO === "80" || PUERTO === "443") {
+    define("SERVIDOR", HTTPS . DOMINIO);
+} else {
+    define("SERVIDOR", HTTPS . DOMINIO . ":" . PUERTO);
+}
+
+#Server para admins
+
+
+/* Rutas de la vista
+    ** Vistas de html o php
+    */
+#define("VISTA", SERVIDOR . "vistas" . "/");
+define("VISTA", SERVIDOR . "/");
+
+//copiar esta de ejemplo sin "#" para seguir colocando rutas:
+
+# define("RUTA_", VISTA . ".php");
+
+//VISTAS PRINCIPALES
+define("RUTA_GENERAL", VISTA);
+define("RUTA_DONATE", VISTA . "donates");
+define("RUTA_CUSTOM", VISTA . "custom");
+define("RUTA_INICIO", VISTA . "inicio");
+
+
+//MAS INFORMACION
+define("RUTA_MAS_INFORMACION", VISTA . "mas-informacion");
+
+//DENUNCIAS Y RECLAMOS
+define("RUTA_DENUNCIAS_RECLAMOS", VISTA . "denuncias-y-reclamos");
+
+//VISTAS ACERCA DE LA SEGURIDAD EN LA PAGINA
+define("RUTA_POLITICAS_PRIVACIDAD", VISTA . "politicas-de-privacidad");
+define("RUTA_TERMINOS_CONDICIONES", VISTA . "terminos-y-condiciones");
+
+
+//RUTAS DE REDIRECCIONES ALTERNAS
+
+#define("RUTA_MUESTRA", SERVIDOR . "muestras" . "/");
+
+//RECURSOS
+define("RUTA_CSS", SERVIDOR . "/view/css" . "/");
+define("RUTA_JS", SERVIDOR . "/view/js" . "/");
+define("RUTA_FAVICON", SERVIDOR . "/view/favicon" . "/");
+define("RUTA_IMG", SERVIDOR . "/view/img" . "/");
+define("DIRECTORIO_RAIZ", realpath(dirname(__FILE__) . "/..")); //para php < 5.3
+// realpath(__DIR__."/..") para php 5.3+
+@session_start();
+@extract($_REQUEST);

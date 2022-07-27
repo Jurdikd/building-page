@@ -1,4 +1,5 @@
 <?php
+$titulo = "IgleVision";
 include_once "app/templates/app-inc-page/cabecera-header-inc.php";
 ?>
 <div class="container">

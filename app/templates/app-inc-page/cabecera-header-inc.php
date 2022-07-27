@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="<?php echo RUTA_CSS ?>style.css">
     <?php if (PUERTO === "80" || PUERTO === "443") {
         # mostramos analiticas
-        # include_once "libs/analitycs.google.php";
+         include_once "libs/analitycs.google.php";
     } ?>
 
 
